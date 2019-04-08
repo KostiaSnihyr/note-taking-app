@@ -138,12 +138,16 @@ span {
     overflow-y: scroll;
 }
 
+.note-text {
+    box-shadow: 0 1px 0 rgb(222, 222, 222), 0 2px 0 rgb(255, 255, 255);
+}
+
 /* note-text-content */
 
 .note-content {
     height: 100%;
     max-width: 100%;
-    border-bottom: 1px solid rgb(216, 216, 216);
+    /* border-bottom: 1px solid rgb(216, 216, 216); */
     max-height: 130px;
     /* overflow-y: scroll; */
     font-size: 14px;
@@ -160,7 +164,6 @@ span {
     border-radius: 3px;
 }
 .date-content {
-    border-top: 1px solid rgb(255, 255, 255);
     padding-top: 5px;
     font-size: 13px;
     font-weight: 600;
