@@ -140,7 +140,7 @@ span {
 
 /* bottom shadow */
 .note-text {
-    box-shadow: 0 1px 0 rgb(222, 222, 222), 0 2px 0 rgb(255, 255, 255);
+    box-shadow: 0 1px 0 rgb(222, 222, 222), 0 2px 0 blue;
 }
 
 /* note-text-content */
