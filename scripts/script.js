@@ -20,6 +20,16 @@ function TodoViewModel(todo) {
         this.todo.addNote(this.newNoteText(), this.chosenColor().color);
         this.newNoteText('');
         this.notes(this.todo.notesArr);
+
+
+        
+        // this.notee = document.querySelector(".note");
+        // console.log('this.notee', this.notee);
+
+        // document.querySelector(".note").style.opacity = '1';
+
+
+
     }
     self.removeNotes = function(note) {
         self.notes.remove(note);
@@ -48,3 +58,4 @@ function TodoView() {
 var todo = new TodoView();
 
 ko.applyBindings(new TodoViewModel(todo), document.getElementById('wrapperr'));
+
