@@ -94,6 +94,8 @@ span {
 
 .selectors-button::before {
     position: absolute;
+    border-radius: 4px;
+
     content: "";
     top: 0;
     right: 0;
@@ -240,6 +242,8 @@ span {
 }
 .btn:active {
     background: linear-gradient(to bottom, rgb(172, 172, 172), rgb(219, 219, 219));
+    box-shadow: none;
+    /* background: blue; */
 }
 .btn1 {
     margin-right: 4px;
