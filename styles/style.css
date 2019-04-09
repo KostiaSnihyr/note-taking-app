@@ -242,7 +242,7 @@ span {
 }
 .btn:active {
     background: linear-gradient(to bottom, rgb(172, 172, 172), rgb(219, 219, 219));
-    box-shadow: none;
+    box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 2px rgb(222, 222, 222);
     /* background: blue; */
 }
 .btn1 {
