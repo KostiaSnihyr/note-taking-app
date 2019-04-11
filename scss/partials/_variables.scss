@@ -1,0 +1,29 @@
+// text-colors
+$headers-text-color: rgb(211, 211, 211);
+$add-btn-color: #fff;
+$text-color: rgb(126, 126, 126);
+$icon-color: rgb(130, 130, 130);
+
+// linear-gradients-background
+$blue-to-top: linear-gradient(to top, rgb(36,171,243), rgb(73,213,250));
+$blue-to-bottom: linear-gradient(to bottom, rgb(36,171,243), rgb(73,213,250));
+$note-gradient: linear-gradient(to top, rgb(235,235,235), rgb(248,248,248));
+$note-header-gradient: linear-gradient(to top, rgb(245,245,245), rgb(248,248,248));
+$note-textarea-gradient: linear-gradient(to top, rgb(237,237,237), rgb(246,246,246));
+$btn-to-top-gradient: linear-gradient(to top, rgb(236,236,236), rgb(255, 255, 255));
+$btn-before-gradient: linear-gradient(to bottom, rgb(236,236,236), rgb(255, 255, 255));
+$btn-active-gradient: linear-gradient(to bottom, rgb(172, 172, 172), rgb(219, 219, 219));
+
+//box-shadows
+$inputs-shadow: 0px 1px 2px rgb(221, 221, 221);
+$add-btn-active-shadow: inset 0 0 0 3px rgb(117, 187, 248);
+$add-btn-shadow: 0px 1px 4px rgb(193, 193, 193);
+$note-shadow: 0px 1px 4px rgb(193, 193, 193), 0px -1px 4px rgb(193, 193, 193);
+$note-content-shadow: 0 1px 0 rgb(222, 222, 222), 0 2px 0 rgb(255, 255, 255);
+$btn-icon-shadow: 0 0 0 1px rgb(222, 222, 222), 0 0 0 2px rgb(255, 255, 255);
+$btn-icon-active-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 0 2px rgb(222, 222, 222);
+
+//text-shadows
+$add-btn-text-shadow: 1px 1px rgb(32, 124, 164);
+$content-text-shadow: 1px 1px rgb(255, 255, 255);
+

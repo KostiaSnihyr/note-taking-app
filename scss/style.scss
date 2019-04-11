@@ -1,0 +1,181 @@
+// colors, shadows, linear-gradients
+@import "partials/variables";
+// global styles
+@import "partials/wrapper";
+// buttons styles
+@import "partials/buttons";
+//mixins
+@import "partials/mixins";
+
+// SELECTORS STYLING 
+.selectors-container > * {
+    margin-bottom: 10px;
+}
+#noteText, .select {
+    height: 26px;
+    box-shadow: $inputs-shadow;
+    outline: none;
+    background: white;
+}
+textarea, .select, .add-button {
+    display: block;
+    width: 144px;
+}
+textarea {
+    resize: none;
+    line-height: 26px;
+    font-size: 16px;
+    font-family: serif;
+    border-radius: 3px; 
+}
+span {
+    color: $headers-text-color;
+}
+
+// NOTES STYLING
+.notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+}
+.note {
+    word-wrap: break-word;
+    min-height: 150px;
+    max-width: 25%;
+    margin-right: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-left: 6px solid;
+    border-radius: 3px;
+    box-shadow: $note-shadow;
+    background: $note-gradient;
+    opacity: 1;
+}
+.note-header-title, .note-content, .date-content, .note-input, .btn-confirm {
+    font-family: 'Muli', sans-serif;
+    font-weight: 500;
+}
+.note-header-title {
+    line-height: 30px;
+}
+.note-text, .date-content, .note-input, .btn-confirm {
+    color: $text-color;
+    text-shadow: $content-text-shadow;
+}
+.note-input, .note-text-content {
+    margin-bottom: 2px;
+    height: 90px;
+    overflow-y: scroll;
+}
+// 2 lines shadow (grey white)
+.note-text {
+    box-shadow: $note-content-shadow;
+}
+// note-text-content 
+.note-content {
+    height: 100%;
+    max-width: 100%;
+    max-height: 130px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.note-header {
+    display: flex;
+    position: sticky;
+    top:0;
+    padding-bottom: 3px;
+    margin-right: 2px;
+    margin-top: 2px;
+    background: $note-header-gradient;
+}
+
+.note-icons {
+    margin-left: auto;
+    i {
+        padding: 5px;
+    }
+}
+.date-content {
+    padding-top: 5px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.note-input {
+    width: 100%;
+    min-height: 70px;
+    background: $note-textarea-gradient;
+    border: none;
+    outline: none;
+    height: 50px;
+    line-height: 20px;
+}
+// MEDIA 
+@include tiny-screens {
+    textarea, .select {
+        width: 180px;
+    }
+    .select {
+        margin-bottom: 30px;
+    }
+    .notes-container {
+        width: 90%;
+        width: 280px;
+    }
+    .note {
+        flex-basis: 100%;
+        min-width: 100%;
+        margin-right: 0px;
+    }
+}
+@include small-screens {
+    textarea, .select {     
+        width: 280px;
+    }
+    .select {
+        margin-bottom: 30px;
+    }
+    .notes-container {
+        width: 90%;
+    }
+    .note {
+        flex-basis: 100%;
+        min-width: 100%;
+        margin-right: 0px;
+    }
+}
+@include medium-screens {
+    textarea, .select {     
+        width: 500px;
+    }
+    .select {
+        margin-bottom: 30px;
+    }
+    .notes-container {
+        width: 90%;
+    }
+    .note {
+        flex-basis: 45%;  
+        min-width: 45%;
+        margin-right: 12px;
+    }
+}
+@include large-screens {
+    textarea, .select {     
+        width: 500px;
+    }
+    .select {
+        margin-bottom: 30px;
+    }
+    .notes-container {
+        width: 90%;
+    }
+    .note {
+        flex-basis: 25%;  
+        min-width: 25%;
+        margin-right: 12px;
+    }
+}
