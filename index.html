@@ -27,10 +27,10 @@
                     <div class="note-header">
                         <h3 data-bind="text: id, style: {color: $data.color}" class="note-header-title"></h3>
                         <div class="note-icons">
-                            <button data-bind="click: $parent.onEditMode" class="btn btn1 btn-general">
+                            <button aria-label="edit button" data-bind="click: $parent.onEditMode" class="btn btn1 btn-general">
                                 <i class="fas fa-pen"></i>
                             </button>
-                            <button data-bind="click: $parent.removeNotes" class="btn btn2 btn-general">
+                            <button aria-label="delete button" data-bind="click: $parent.removeNotes" class="btn btn2 btn-general">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </div>
