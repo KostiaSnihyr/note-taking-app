@@ -26,7 +26,6 @@ body {
   text-shadow: 1px 1px #207ca4;
   box-shadow: 0px 1px 4px #c1c1c1;
   outline: none;
-  transition: all 4.4s ease 2s;
   position: relative;
   background: linear-gradient(to top, #24abf3, #49d5fa);
   z-index: 1; }
@@ -91,6 +90,29 @@ body {
 .btn-confirm {
   margin: 0 auto;
   width: 100%; }
+
+#noteText:focus, .select:focus, .add-button:focus {
+  border: 1.5px solid rgba(45, 53, 102, 0.5);
+  border-radius: 4px; }
+
+.btn1:focus {
+  border: 1.5px solid rgba(45, 53, 102, 0.5); }
+
+.btn2:focus {
+  border: 1.5px solid rgba(45, 53, 102, 0.5); }
+
+.add-button:active {
+  border: none; }
+
+.btn1:active {
+  border: none; }
+
+.btn2:active {
+  border: none; }
+
+/* Remove outline for non-keyboard :focus */
+*:focus:not(.focus-visible) {
+  outline: none; }
 
 .selectors-container > * {
   margin-bottom: 10px; }

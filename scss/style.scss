@@ -6,6 +6,15 @@
 @import "partials/buttons";
 //mixins
 @import "partials/mixins";
+//mixins
+@import "partials/focus";
+
+
+
+/* Remove outline for non-keyboard :focus */
+*:focus:not(.focus-visible) {
+    outline: none;
+}
 
 // SELECTORS STYLING 
 .selectors-container > * {

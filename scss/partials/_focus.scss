@@ -1,0 +1,29 @@
+#noteText:focus, .select:focus, .add-button:focus {
+    border: 1.5px solid rgba(45, 53, 102, 0.5);
+    border-radius: 4px;
+}
+
+.btn1:focus {
+    border: 1.5px solid rgba(45, 53, 102, 0.5);
+}
+
+.btn2:focus {
+    border: 1.5px solid rgba(45, 53, 102, 0.5);
+}
+
+// #noteText:active, .select:active, .add-button:active {
+//     border: none;
+// }
+
+.add-button:active {
+    border: none;
+
+}
+
+.btn1:active {
+    border: none;
+}
+
+.btn2:active {
+    border: none;
+}
