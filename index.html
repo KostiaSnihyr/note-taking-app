@@ -43,7 +43,7 @@
                             </button>
                         </div>
                     </div>
-                    <div data-bind="attr: { 'aria-label': 'context of ' + id}" class="note-text">
+                    <div role="region" data-bind="attr: { 'aria-label': 'context of ' + id}" class="note-text">
                         <p data-bind="visible: !turnOnBtn(), text: title" class="note-text-content"></p>
                         <textarea class="note-input" data-bind="visible: turnOnBtn, value: title, hasFocus: turnOnBtn"></textarea>
                     </div>
