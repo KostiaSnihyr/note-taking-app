@@ -26,16 +26,26 @@
     outline: none;
     background: white;
 }
-textarea, .select, .add-button {
+#note-text-header {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.txtar, .select, .add-button {
     display: block;
     width: 144px;
+    border: 1px solid rgb(201, 195, 195);
 }
-textarea {
+.txtar {
     resize: none;
     line-height: 26px;
     font-size: 16px;
     font-family: serif;
     border-radius: 3px; 
+    // border: 1px solid rgb(133, 131, 131);
+}
+
+textarea {
+    resize: none;
 }
 span {
     color: $headers-text-color;
@@ -124,7 +134,7 @@ span {
 }
 // MEDIA 
 @include tiny-screens {
-    textarea, .select {
+    .txtar, .select {
         width: 180px;
     }
     .select {
@@ -141,7 +151,7 @@ span {
     }
 }
 @include small-screens {
-    textarea, .select {     
+    .txtar, .select {     
         width: 280px;
     }
     .select {
@@ -157,7 +167,7 @@ span {
     }
 }
 @include medium-screens {
-    textarea, .select {     
+    .txtar, .select {     
         width: 500px;
     }
     .select {
@@ -173,7 +183,7 @@ span {
     }
 }
 @include large-screens {
-    textarea, .select {     
+    .txtar, .select {     
         width: 500px;
     }
     .select {

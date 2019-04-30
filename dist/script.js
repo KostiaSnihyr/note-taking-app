@@ -4,6 +4,7 @@ function TodoViewModel(todo) {
     self.date = '';
     self.newNoteText = ko.observable('');
     self.notes = ko.observableArray();
+    console.log('this.todo', this.todo);
 
     // this.availableColors = ko.observableArray(["red", "slateblue", "lightseagreen", "khaki", "slategray", "deeppink", "coral"]);
     // this.availableColors = ko.observableArray([["red", "1"], ["slateblue", "2"]]);
@@ -17,7 +18,7 @@ function TodoViewModel(todo) {
         console.log(self.chosenColor().colorName);
 
         self.date = moment().format('MMMM MM, LT');
-        this.todo.addNote(this.newNoteText(), this.chosenColor().color);
+        this.todo.addNote(this.newNoteText(), this.chosenColor().color, this.chosenColor().colorName);
         this.newNoteText('');
         this.notes(this.todo.notesArr);
 
@@ -43,13 +44,14 @@ function TodoViewModel(todo) {
 function TodoView() {
     this.notesArr = [];
     var counter = 1;
-    this.addNote = function(todoTitle, color) {
+    this.addNote = function(todoTitle, color, colorN) {
         this.notesArr.unshift({
             id: 'Note ' + counter++,
             title: ko.observable(todoTitle),
             color: color,
             isEditMode: ko.observable(false),
-            turnOnBtn: ko.observable(false)
+            turnOnBtn: ko.observable(false),
+            colorName: colorN
         })
         console.log(this.notesArr);
     }

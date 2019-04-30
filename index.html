@@ -14,32 +14,40 @@
 <body>
     <div class="wrapper" id="wrapperr">  
         <div class="selectors-container">
-            <span id="note-text-header">Note Text</span>
-            <textarea aria-labelledby="note-text-header" id="noteText" cols="30" rows="1" data-bind="textInput: newNoteText"></textarea>
-            <span id="color-heading">Note Color</span>
-            <select role="listbox" aria-labelledby="color-heading" data-bind='options: availableColors, optionsText: "colorName", value: chosenColor' class="select"></select>
-            <button data-bind="click: addNote" class="add-button btn-general">ADD NOTE</button>
+
+            <!-- <span id="note-text-header">Note Text</span>
+            <textarea role="textbox" aria-labelledby="note-text-header" id="noteText" cols="30" rows="1" data-bind="textInput: newNoteText"></textarea> -->
+
+            <div id="note-text-header">Note Text</div>
+            <textarea class="txtar" role="textbox" contenteditable="true" aria-placeholder="5-digit zipcode" aria-labelledby="note-text-header" id="noteText" cols="30" rows="1" data-bind="textInput: newNoteText"></textarea>
+
+
+            <!-- <span id="color-heading">Note Color</span> -->
+            <label for="listbox1" id="color-heading">Note Color</label> 
+            <select id="listbox1" aria-labelledby="color-heading" data-bind='options: availableColors, optionsText: "colorName", value: chosenColor' class="select"></select>
+            <button role="button" data-bind="click: addNote" class="add-button btn-general">ADD NOTE</button>
         </div>
 
         <div data-bind="foreach: notes" class="notes-container" id="notes-container">
-            <div data-bind="style: {'border-left-color': $data.color}" class="note">
+            <div tabindex='0' data-bind="style: {'border-left-color': $data.color}, attr: {'aria-label': colorName + ' color ' + id}" class="note">
                 <div class="note-content">
                     <div class="note-header">
-                        <h3 data-bind="text: id, style: {color: $data.color}" class="note-header-title"></h3>
+                        <h3 role="heading" data-bind="text: id, style: {color: $data.color}" class="note-header-title"></h3>
                         <div class="note-icons">
-                            <button aria-label="edit button" data-bind="click: $parent.onEditMode" class="btn btn1 btn-general">
+                            <!-- <button role="button" aria-label="edit button" data-bind="click: $parent.onEditMode" class="btn btn1 btn-general"> -->
+                            <button role="button" data-bind="click: $parent.onEditMode, attr: {'aria-label': 'edit text of ' + id}" class="btn btn1 btn-general">               
                                 <i class="fas fa-pen"></i>
                             </button>
-                            <button aria-label="delete button" data-bind="click: $parent.removeNotes" class="btn btn2 btn-general">
+                            <button role="button" data-bind="click: $parent.removeNotes, attr: {'aria-label': 'delete ' + id}" class="btn btn2 btn-general">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </div>
                     </div>
-                    <div class="note-text">
+                    <div data-bind="attr: { 'aria-label': 'context of ' + id}" class="note-text">
                         <p data-bind="visible: !turnOnBtn(), text: title" class="note-text-content"></p>
                         <textarea class="note-input" data-bind="visible: turnOnBtn, value: title, hasFocus: turnOnBtn"></textarea>
                     </div>
-                    <button data-bind="click: $parent.offEditMode, visible: $data.turnOnBtn" class="btn-general btn btn-confirm">Confirm</button>
+                    <button role="button" aria-label="delete button" data-bind="click: $parent.offEditMode, visible: $data.turnOnBtn" class="btn-general btn btn-confirm">Confirm</button>
                 </div>
                 <p data-bind="text: $parent.date" class="date-content" ></p>
             </div>

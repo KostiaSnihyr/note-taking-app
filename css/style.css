@@ -123,16 +123,24 @@ body {
   outline: none;
   background: white; }
 
-textarea, .select, .add-button {
-  display: block;
-  width: 144px; }
+#note-text-header {
+  margin-top: 20px;
+  margin-bottom: 0px; }
 
-textarea {
+.txtar, .select, .add-button {
+  display: block;
+  width: 144px;
+  border: 1px solid #c9c3c3; }
+
+.txtar {
   resize: none;
   line-height: 26px;
   font-size: 16px;
   font-family: serif;
   border-radius: 3px; }
+
+textarea {
+  resize: none; }
 
 span {
   color: lightgray; }
@@ -214,7 +222,7 @@ span {
   line-height: 20px; }
 
 @media only screen and (max-width: 320px) {
-  textarea, .select {
+  .txtar, .select {
     width: 180px; }
   .select {
     margin-bottom: 30px; }
@@ -227,7 +235,7 @@ span {
     margin-right: 0px; } }
 
 @media only screen and (min-width: 321px) {
-  textarea, .select {
+  .txtar, .select {
     width: 280px; }
   .select {
     margin-bottom: 30px; }
@@ -239,7 +247,7 @@ span {
     margin-right: 0px; } }
 
 @media only screen and (min-width: 680px) {
-  textarea, .select {
+  .txtar, .select {
     width: 500px; }
   .select {
     margin-bottom: 30px; }
@@ -251,7 +259,7 @@ span {
     margin-right: 12px; } }
 
 @media only screen and (min-width: 960px) {
-  textarea, .select {
+  .txtar, .select {
     width: 500px; }
   .select {
     margin-bottom: 30px; }
